@@ -14,19 +14,19 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/eregs/regulations-site.git"
+    "url": "http://github.com/fecgov/regulations-site.git"
   },
   "bugs": {
-    "url": "http://github.com/eregs/regulations-site/issues"
+    "url": "http://github.com/fecgov/regulations-site/issues"
   },
   "licenses": [
     {
       "type": "Public Domain",
-      "url": "http://github.com/eregs/regulations-site/blob/master/TERMS.md"
+      "url": "http://github.com/fecgov/regulations-site/blob/master/TERMS.md"
     }
   ],
   "engines": {
-    "node": "6.9.2"
+    "node": "10.16.0"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
@@ -45,7 +45,7 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.8.0",
     "expect.js": "~0.2.0",
-    "grunt": "^0.4.5",
+    "grunt": "1.1.0",
     "grunt-browserify": "^5.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^1.0.1",
