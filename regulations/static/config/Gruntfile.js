@@ -122,13 +122,13 @@ module.exports = function toExport(grunt) {
       },
     },
 
-    mocha_istanbul: {
+    nyc: {
       coverage: {
         src: ['<%= config.frontEndPath %>/js/unittests/specs/**/*.js'],
         options: {
           root: '<%= config.frontEndPath %>/js',
           scriptPath: require.resolve('isparta/lib/cli'),
-          istanbulOptions: ['--include-all-sources'],
+          nycOptions: ['--include-all-sources'],
           mochaOptions: ['--compilers', 'js:babel-register'],
           nodeExec: require.resolve('.bin/babel-node'),
           coverageFolder: '<%= config.frontEndPath %>/js/unittests/coverage',
@@ -156,8 +156,8 @@ module.exports = function toExport(grunt) {
   /**
    * Create task aliases by registering new tasks
    */
-  grunt.registerTask('test', ['eslint', 'mocha_istanbul']);
-  grunt.registerTask('test-js', ['eslint', 'mocha_istanbul']);
+  grunt.registerTask('test', ['eslint', 'nyc']);
+  grunt.registerTask('test-js', ['eslint', 'nyc']);
   grunt.registerTask('build-dev', ['env:dev', 'copy', 'browserify:dev', 'sass']);
   grunt.registerTask('build-dist', ['env:dist', 'copy', 'browserify:dist', 'sass', 'cssmin']);
   grunt.registerTask('default', ['build-dist']);
