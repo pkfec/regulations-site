@@ -50,7 +50,7 @@
     "grunt-sass": "^2.0.0",
     "grunt-shell": "^1.2.1",
     "isparta": "^4.0.0",
-    "istanbul": "^0.4.2",
+    "nyc": "15.0.0",
     "jsdom": "^8.1.0",
     "load-grunt-tasks": "^3.4.1",
     "minifyify": "^7.2.1",
