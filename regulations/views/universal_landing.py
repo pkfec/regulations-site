@@ -51,6 +51,6 @@ def universal(request):
     context['cfr_titleno_arabic'] = regs[0]['meta']['cfr_title_number']
 
     t = select_template([
-        'regulations/universal_landing.html',
+        # 'regulations/universal_landing.html',
         'regulations/generic_universal.html'])
     return HttpResponse(t.render(context, request))
