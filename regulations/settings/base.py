@@ -107,6 +107,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "regulations.context.eregs_globals",
             ),
+            'builtins': ['overextends.templatetags.overextends_tags'],
             # List of callables that know how to import templates from various
             # sources.
             # loaders is deprecated in django 2.0
