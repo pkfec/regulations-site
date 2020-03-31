@@ -93,6 +93,8 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', get_random_string(50))
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
+        'DIRS': [],
+        'APP_DIRS': True,
         "OPTIONS": {
             "context_processors": (
                 # "django.contrib.auth.context_processors.auth",
@@ -107,11 +109,12 @@ TEMPLATES = [
             ),
             # List of callables that know how to import templates from various
             # sources.
-            "loaders": [
-                ('django.template.loaders.cached.Loader', (
-                    'django.template.loaders.filesystem.Loader',
-                    'django.template.loaders.app_directories.Loader'))
-            ],
+            # loaders is deprecated in django 2.0
+            # "loaders": [
+            #     ('django.template.loaders.cached.Loader', (
+            #         'django.template.loaders.filesystem.Loader',
+            #         'django.template.loaders.app_directories.Loader'))
+            # ],
         }
     },
 ]
