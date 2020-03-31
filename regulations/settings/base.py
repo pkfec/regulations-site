@@ -111,11 +111,11 @@ TEMPLATES = [
             # List of callables that know how to import templates from various
             # sources.
             # loaders is deprecated in django 2.0
-            "loaders": [
-                ('django.template.loaders.cached.Loader', (
-                    'django.template.loaders.filesystem.Loader',
-                    'django.template.loaders.app_directories.Loader'))
-            ],
+            # "loaders": [
+            #     ('django.template.loaders.cached.Loader', (
+            #         'django.template.loaders.filesystem.Loader',
+            #         'django.template.loaders.app_directories.Loader'))
+            # ],
         }
     },
 ]
