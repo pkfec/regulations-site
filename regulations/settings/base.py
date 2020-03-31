@@ -93,7 +93,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', get_random_string(50))
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        'DIRS': ['/regulations/templates/regulations/'],
+        'DIRS': ['/regulations/templates/regulations/', '/regulations/templates'],
         'APP_DIRS': True,
         "OPTIONS": {
             "context_processors": (
