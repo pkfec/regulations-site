@@ -94,7 +94,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', get_random_string(50))
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        'DIRS': [os.path.join(SETTINGS_PATH, 'regulations/templates')],
+        'DIRS': [os.path.join(SETTINGS_PATH, 'templates')],
         "OPTIONS": {
             "context_processors": (
                 # "django.contrib.auth.context_processors.auth",
