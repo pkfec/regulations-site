@@ -9,6 +9,7 @@ from django.utils.crypto import get_random_string
 here = lambda *x: join(abspath(dirname(__file__)), *x)
 PROJECT_ROOT = here("..", "..")
 root = lambda *x: join(abspath(PROJECT_ROOT), *x)
+SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 
 DEBUG = True
 
@@ -93,8 +94,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', get_random_string(50))
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        'DIRS': ['/regulations/templates/regulations/', '/regulations/templates'],
-        'APP_DIRS': True,
+        'DIRS': [os.path.join(SETTINGS_PATH, 'regulations/templates')],
         "OPTIONS": {
             "context_processors": (
                 # "django.contrib.auth.context_processors.auth",
