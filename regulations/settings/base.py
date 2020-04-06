@@ -10,6 +10,7 @@ here = lambda *x: join(abspath(dirname(__file__)), *x)
 PROJECT_ROOT = here("..", "..")
 root = lambda *x: join(abspath(PROJECT_ROOT), *x)
 SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DEBUG = True
 
@@ -95,7 +96,8 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', get_random_string(50))
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        'DIRS': [os.path.join(SETTINGS_PATH, 'templates')],
+        #'DIRS': [os.path.join(SETTINGS_PATH, 'templates')],
+        "DIRS" : [os.path.join(BASE_DIR, '/regulations/templates/regulations'), 'regulations/templates']
         "OPTIONS": {
             "context_processors": (
                 # "django.contrib.auth.context_processors.auth",
@@ -112,11 +114,11 @@ TEMPLATES = [
             # List of callables that know how to import templates from various
             # sources.
             # loaders is deprecated in django 2.0
-            # "loaders": [
-            #     ('django.template.loaders.cached.Loader', (
-            #         'django.template.loaders.filesystem.Loader',
-            #         'django.template.loaders.app_directories.Loader'))
-            # ],
+            "loaders": [
+                ('django.template.loaders.cached.Loader', (
+                    'django.template.loaders.filesystem.Loader',
+                    'django.template.loaders.app_directories.Loader'))
+            ],
         }
     },
 ]
