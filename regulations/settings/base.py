@@ -10,7 +10,7 @@ here = lambda *x: join(abspath(dirname(__file__)), *x)
 PROJECT_ROOT = here("..", "..")
 root = lambda *x: join(abspath(PROJECT_ROOT), *x)
 SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
-#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DEBUG = True
 
@@ -97,7 +97,7 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         #'DIRS': [os.path.join(SETTINGS_PATH, 'templates')],
-        #"DIRS" : [os.path.join(BASE_DIR, '/regulations/templates/regulations'), 'regulations/templates']
+        "DIRS" : [os.path.join(BASE_DIR, '/regulations/templates/regulations'), 'regulations/templates'],
         "OPTIONS": {
             "context_processors": (
                 # "django.contrib.auth.context_processors.auth",
