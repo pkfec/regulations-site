@@ -12,7 +12,7 @@ root = lambda *x: join(abspath(PROJECT_ROOT), *x)
 SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-DEBUG = True
+DEBUG = False
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -77,12 +77,13 @@ else:
 STATIC_URL = '/static/'
 
 # Additional locations of static files
-STATICFILES_DIRS = (
+#STATICFILES_DIRS = 
+    #(
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(BASE_DIR, 'static'),
-)
+    #os.path.join(SETTINGS_PATH, 'static'),
+#)
 
 # List of finder classes that know how to find static files in
 # various locations.
