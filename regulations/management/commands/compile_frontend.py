@@ -28,8 +28,8 @@ static directory for the CSS, font, JavaScript, and image assets.
 
 class Command(BaseCommand):
     help = 'Build the frontend, including local overrides.'
-    BUILD_DIR = "/frontend_build"
-    TARGET_DIR = "/compiled/regulations"
+    BUILD_DIR = "./frontend_build"
+    TARGET_DIR = "./compiled/regulations"
 
     def add_arguments(self, parser):
         parser.add_argument('--no-install', dest='install',
