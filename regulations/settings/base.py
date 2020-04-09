@@ -108,6 +108,7 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
                 "django.template.context_processors.request",
                 "regulations.context.eregs_globals",
+                'fec_eregs.context_processors.app_urls',
             ),
             # List of callables that know how to import templates from various
             # sources.
