@@ -150,7 +150,7 @@ class ChromeView(TemplateView):
                                 version=version)
         self._assert_good(response)
         response.render()
-        return response.content
+        return response.content.decode('utf-8')
 
 
 class ChromeSubterpView(ChromeView):
@@ -219,7 +219,7 @@ class ChromeLandingView(ChromeView):
         """Landing page isn't a TemplateView"""
         response = landing_page(self.request, context['reg_part'])
         self._assert_good(response)
-        context['main_content'] = response.content
+        context['main_content'] = response.content.decode('utf-8')
 
     def fill_kwargs(self, kwargs):
         """Add the version and replace the label_id for the chrome context"""
