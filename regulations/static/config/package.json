@@ -1,17 +1,7 @@
 {
   "name": "regulations-site",
-  "version": "8.4.0",
+  "version": "8.4.2",
   "homepage": "https://eregs.github.io/",
-  "contributors": [
-    {
-      "name": "Consumer Financial Protection Bureau",
-      "url": "http://cfpb.github.io/"
-    },
-    {
-      "name": "18F",
-      "url": "https://18f.gsa.gov/"
-    }
-  ],
   "repository": {
     "type": "git",
     "url": "http://github.com/fecgov/regulations-site.git"
@@ -26,7 +16,7 @@
     }
   ],
   "engines": {
-    "node": "10.16.0"
+    "node": "14.13.0"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
@@ -93,10 +83,5 @@
     "respond.js": "^1.4.2",
     "underscore": "^1.8.3",
     "urijs": "^1.18.10"
-  },
-  "config": {
-    "travis-cov": {
-      "threshold": 70
-    }
   }
 }
